@@ -177,8 +177,7 @@ print('Welcome to Black Jack Game!')
 
 while True:
     
-    playing = True
-    
+    #playing = True
     
     new_deck = Deck()
     
