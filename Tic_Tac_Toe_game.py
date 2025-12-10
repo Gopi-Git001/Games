@@ -45,7 +45,7 @@ def place_marker(board,marker,position):
     
     board[position]  = marker
 
-
+#check all possibilities
 def win_check(board, mark):
     return ((board[7] == mark and board[8] == mark and board[9] == mark) or  
             (board[4] == mark and board[5] == mark and board[6] == mark) or  
@@ -170,3 +170,4 @@ while True:
     if not replay():
         break
             
+    
