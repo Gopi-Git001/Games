@@ -74,3 +74,80 @@ class Chips:
         
         self.total -= self.bet
         
+
+def take_bet(chips):
+    
+    while True:
+        
+        try:
+            
+            chips.bet = int(input('Please provide your bet amount:'))
+        
+        except:
+            print('You entered wrong setails please enter Integer value')
+            
+        else:
+            
+            if chips.bet > chips.total :
+                
+                print('sorry your bet exceeds the total amount,chips.total')
+                
+            else:
+                
+                break
+            
+def hit(deck,hand):
+    
+    hand.add_cards(deck.deal_one())
+    
+    hand.adjust_for_aces()
+
+def hit_or_stand(deck,hand):
+    
+    global playing
+    
+    
+    while True:
+        
+        x = input('would you like to Hit or Stand Enter h or s ')
+        
+        if x[0].lower() == 'h':
+            
+            hit(deck,hand)
+            
+        elif x[0].lower() == 's':
+            
+            print('Player Stands,Dealer is playing')
+            
+            playing= False
+        else:
+            print('Sorry I did not understand')
+            
+            continue
+        
+
+def show_some(player,dealer):
+    
+    print("\n Dealer's Hand:")
+    print(dealer.cards[1])
+    
+    print("\n player's Hand:")
+    
+    for card in player.cards:
+        print(card)
+        
+def show_all(player,dealer):
+    
+    print('Players cards:')
+    for card in player.cards:
+        print(card)
+        
+    print('Dealer cards:')
+
+    for card in dealer.cards:
+        print(card)
+
+
+
+
+                
