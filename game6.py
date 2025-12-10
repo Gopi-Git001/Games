@@ -149,5 +149,27 @@ def show_all(player,dealer):
 
 
 
+def player_busts(player,dealer,chips):
+    print('Player Busts')
+    chips.lose_bet()
+    
+def player_win(player,dealer,chips):
+    print('Player wins')
+    chips.win_bet()
+    
+def dealer_busts(player,dealer,chips):
+    print('Player win ')
+    chips.win_bet()
+    
+def dealer_win(player,dealer,chips):
+    print('dealer win')
+    chips.lose_bet()
+    
+def push(player,dealer):
+    print("Tie It's a push")
+
+
+    
+    
 
                 
